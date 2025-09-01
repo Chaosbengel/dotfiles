@@ -35,7 +35,6 @@ alias lmk='ssh-add ~/.ssh/chaosbengel'
 alias lzg='lazygit'
 alias vi='vim'
 
-
 function md2pdf {
     local infile
     local outfile
@@ -58,6 +57,14 @@ function cdt {
     local tempdir
     tempdir=$(mktemp -d) || return 1
     cd "$tempdir" || return 1
+}
+
+function sshbindport {
+    local remote
+    local port
+    remote="$1"
+    port="$2"
+    ssh -L "$port:$remote:$port" -N -f "$remote"
 }
 
 # Prompt
