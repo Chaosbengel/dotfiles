@@ -11,8 +11,8 @@ CP_SRC_TGT=(
     "$HOME/.bashrc:bashrc"
     "$HOME/.vimrc:vimrc"
     "$HOME/.config/sway/config:sway/config"
-    "$HOME/.config/waybar:waybar"
-    )
+    "$HOME/.config/waybar/.:waybar"
+)
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
