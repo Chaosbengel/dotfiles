@@ -1,0 +1,29 @@
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "height": 30,
+        "modules-left": ["custom/pawMenu", "custom/spacer1", "battery",
+"custom/spacer1", "cpu", "custom/spacer1", "temperature#cpu", "custom/spacer1",
+"memory", "custom/spacer1", "disk#root", "custom/spacer1", "disk#home", "custom/spacer1", "custom/dnfUpdates", "custom/spacer1",],
+        "modules-center": ["custom/spacer1", "clock", "custom/spacer2"],
+        "modules-right": ["custom/spacer2", "custom/neovim", "custom/alacritty", "custom/spacer2", "custom/powerMenu"],
+        "fixed-center": true,
+        "include": [
+            "~/.config/waybar/modules.json"
+        ]
+       
+    },
+    {
+        "layer": "top",
+        "position": "bottom",
+        "height": 30,
+        "modules-left": ["sway/workspaces", "sway/mode", "custom/spacer2", "network#wired", "custom/spacer2", "network#wifi", "custom/spacer2"],
+        "modules-center": ["custom/mpdlast", "custom/spacer2", "mpd", "custom/spacer1", "custom/mpdnext"],
+        "modules-right": ["custom/spacer1", "bluetooth", "custom/spacer1", "backlight", "custom/spacer1", "pulseaudio", "custom/spacer1", "tray"],
+        "fixed-center": true,
+        "include": [
+            "~/.config/waybar/modules.json"
+        ]
+    }
+]

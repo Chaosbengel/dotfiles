@@ -7,10 +7,11 @@ set -eu
 
 DOTFILES_DIR="dotfiles"
 
-DOTFILE_TGTLOC=(
+CP_SRC_TGT=(
     "$HOME/.bashrc:bashrc"
     "$HOME/.vimrc:vimrc"
     "$HOME/.config/sway/config:sway/config"
+    "$HOME/.config/waybar:waybar"
     )
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -19,10 +20,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 cd "$DOTFILES_DIR"
 
-for item in "${DOTFILE_TGTLOC[@]}"; do
+for item in "${CP_SRC_TGT[@]}"; do
     file="${item%%:*}"
     tgt="${item##*:}"
     dir=$(dirname "$tgt")
     [ -d "$dir" ] || mkdir -p "$dir"
-    cp "$file" "$tgt"
+    cp -r "$file" "$tgt"
 done

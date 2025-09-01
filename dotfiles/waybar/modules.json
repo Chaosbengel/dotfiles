@@ -1,0 +1,159 @@
+{
+    "sway/window": {
+            "max-length": 50
+         },
+    "tray": {
+            "icon-size": 20,
+            "spacing": 2
+        },
+
+    "network#wifi": {
+        "interface": "wlp61s0",
+        "interval": 3,
+        "family": "ipv4",
+        "format": "{icon} {frequency}GHz: {essid} - {ipaddr}",
+        "format-alt": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-disconnected": "󰤭 Not connected",
+        "format-icons": ["󰤠","󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "network#wired": {
+        "interface": "enp0s31f6",
+        "interval": 3,
+        "family": "ipv4",
+        "format": "{icon} Connected: {ipaddr}",
+        "format-icons": ["󰈁"],
+        "format-disconnected": "󰈂  Not connected",
+
+    },
+
+    "mpd": {
+        "server": "localhost",
+        "port": "6600",
+        "interval": 30,
+        "unknown-tag": "N/A",
+        "format": "{stateIcon} {artist} - {title}",
+        "format-stopped": "󰓛 stopped.",
+        // "format-paused": "{stateIcon} paused",
+        "format-disconnected": "MPD not running",
+        "state-icons": { "playing": "󰐊", "paused": "󰏤"},
+        "on-click": "mpc toggle"
+    },
+
+    "custom/mpdnext": {
+        "format": "󰒬",
+        "on-click": "mpc next"
+    },
+    "custom/mpdlast": {
+        "format": "󰒫",
+        "on-click": "mpc next"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        // "format-bluetooth": "",
+        "format-muted": "󰝟 Mute",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 1,
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute 0 toggle",
+        "tooltip": false
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "scroll-step": 1,
+        "tooltip": false
+    }, 
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "󱐋 {capacity}%"
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b %H:%M} Uhr",
+        "format": "{:%H:%M} Uhr"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon}  {usage}%",
+        "format-icons": [""]
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{icon} {percentage}% 󰪟 {swapPercentage}%",
+        "format-icons": [""]
+    },
+    "disk#root": {
+        "interval": 30,
+        "format": " {free}",
+        "path": "/"
+    },
+    "disk#home": {
+        "interval": 30,
+        "format": " {free}",
+        "path": "/home"
+    },
+    "temperature#cpu": {
+        "thermal-zone": 5,
+        "critical-threshold": 75,
+        "format": "{icon} {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""]
+
+    },
+    "bluetooth": {
+        "format": "󰂯 {status}",
+        "format-off": "󰂲 {status}",
+        "format-connected": "󰂱 {device_alias}",
+    },
+
+    "custom/pawMenu": {
+        "format": "󰏩"
+    },
+
+    "custom/powerMenu": {
+        "format": "󰐥",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/menus/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "systemctl poweroff",
+            "reboot": "systemctl reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate",
+        }
+    },
+
+    "custom/dnfUpdates": {
+        "format": "󰏕 {}",
+        "exec": "~/.config/waybar/scripts/dnf_update_package_count",
+        "on-click": "~/.config/waybar/scripts/dnf_update_package_count",
+        "interval": 7200
+    },
+
+    "custom/spacer1": {
+        "format": "",
+        "tooltip": false,
+    },
+
+    "custom/spacer2": {
+        "format": "<span font='16'></span>",
+        "tooltip": false
+    },
+
+    "custom/neovim": {
+        "format": "",
+        "tooltip": "Start neovim in home",
+        "on-click": "alacritty -e nvim",
+    },
+
+    "custom/alacritty": {
+        "format": "",
+        "tooltip": "Start Alacritty",
+        "on-click": "alacritty" 
+    },
+}

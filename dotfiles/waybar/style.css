@@ -1,0 +1,78 @@
+@import url("./colors.css");
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "BlexMono Nerd font";
+    font-size: 15px;
+    min-height: 0;
+}
+
+
+
+#window {
+    font-weight: bold;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    color: @font;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: @font;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: @font;
+    border-bottom: 3px solid @font;
+}
+
+#workspaces button.urgent {
+    background: #c9545d;
+    color: @font;
+    border-bottom: 2px solid transparent
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid @font;
+}
+
+#custom-pawMenu,
+#custom-dnfUpdates,
+#clock,
+#temperature.cpu,
+#disk,
+#memory,
+#cpu,
+#battery,
+#custom-powerMenu,
+#network.wired,
+#network.wifi,
+#backlight,
+#pulseaudio,
+#bluetooth,
+#mpd,
+#tray {
+    padding: 0 7px;
+    margin: 0 2px;
+}
+
+#cpu {
+    min-width: 55px;
+}
+
+#custom-spacer1 {
+    font-size: 21px;
+}
+
+#custom-neovim,
+#custom-alacritty {
+    font-size: 20px;
+    min-width: 20px;
+}
+
+
