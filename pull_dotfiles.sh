@@ -10,6 +10,7 @@ DOTFILES_DIR="dotfiles"
 DOTFILE_TGTLOC=(
     "$HOME/.bashrc:bashrc"
     "$HOME/.vimrc:vimrc"
+    "$HOME/.config/sway/config:sway/config"
     )
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
