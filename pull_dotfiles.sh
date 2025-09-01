@@ -15,6 +15,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 [ -d "$DOTFILES_DIR" ] || mkdir -p "$DOTFILES_DIR"
 
+cd "$DOTFILES_DIR"
+
 for item in "${DOTFILE_TGTLOC[@]}"; do
     file="${item%%:*}"
     tgt="${item##*:}"
