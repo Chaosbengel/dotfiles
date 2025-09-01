@@ -9,6 +9,7 @@ DOTFILES_DIR="dotfiles"
 
 DOTFILE_TGTLOC=(
     "$HOME/.bashrc:bashrc"
+    "$HOME/.vimrc:vimrc"
     )
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
