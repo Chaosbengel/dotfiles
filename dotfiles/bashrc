@@ -33,6 +33,7 @@ alias ....="cd ../../.."
 # Load Mah Key!
 alias lmk='ssh-add ~/.ssh/chaosbengel'
 alias lzg='lazygit'
+alias vi='vim'
 
 
 function md2pdf {
