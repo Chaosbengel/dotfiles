@@ -8,7 +8,7 @@
         },
 
     "network#wifi": {
-        "interface": "wlp61s0",
+        "interface": "wlan0",
         "interval": 3,
         "family": "ipv4",
         "format": "{icon} {frequency}GHz: {essid} - {ipaddr}",
