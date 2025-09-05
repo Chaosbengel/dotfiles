@@ -5,7 +5,7 @@
         "height": 30,
         "modules-left": ["custom/pawMenu", "custom/spacer1", "battery",
 "custom/spacer1", "cpu", "custom/spacer1", "temperature#cpu", "custom/spacer1",
-"memory", "custom/spacer1", "disk#root", "custom/spacer1", "disk#home", "custom/spacer1", "custom/dnfUpdates", "custom/spacer1",],
+"memory", "custom/spacer1", "disk#root", "custom/spacer1", "custom/dnfUpdates", "custom/spacer1",],
         "modules-center": ["custom/spacer1", "clock", "custom/spacer2"],
         "modules-right": ["custom/spacer2", "custom/neovim", "custom/alacritty", "custom/spacer2", "custom/powerMenu"],
         "fixed-center": true,

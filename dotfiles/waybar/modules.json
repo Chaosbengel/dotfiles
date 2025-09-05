@@ -92,11 +92,6 @@
         "format": " {free}",
         "path": "/"
     },
-    "disk#home": {
-        "interval": 30,
-        "format": " {free}",
-        "path": "/home"
-    },
     "temperature#cpu": {
         "thermal-zone": 5,
         "critical-threshold": 75,
