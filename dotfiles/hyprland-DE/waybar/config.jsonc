@@ -1,0 +1,27 @@
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "height": 33,
+        "modules-left": ["custom/pawMenu", "custom/spaceTopLeft", "cpu", "temperature#cpu", "memory#ram", "memory#swap", "disk", "battery"],
+        "modules-center": ["clock"],
+        "modules-right": [],
+        "fixed-center": true,
+        "include": [
+            "~/.config/waybar/modules.jsonc"
+        ]
+    },
+    {
+        "layer": "top",
+        "position": "bottom",
+        "height": 33,
+        "modules-left": ["hyprland/workspaces"],
+        "modules-center": ["network#wired", "custom/spaceBottomMid", "network#wifi"],
+        "modules-right": ["tray"],
+        "fixed-center": true,
+        "include": [
+            "~/.config/waybar/modules.jsonc"
+        ]
+    }
+]
+

@@ -15,17 +15,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Don't remove, required for vundle function
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'preservim/Nerdtree'
+Plugin 'dense-analysis/ale'
 " Add plugins here! I am not comfortable with automatically pulling 3rd party
 " git repos, so I pull manually and include them from a directory. But, ist
 " is possible to use repos directly. If you want to do this, read vundle docs!
 
 " Nerdtree file explorer
 " https://github.com/preservim/nerdtree
-Plugin 'file:///home/chaosbengel/.vim/plugins_upstream/nerdtree'
+"Plugin 'file:///home/chaosbengel/.vim/plugins_upstream/nerdtree'
 
 " ALE for syntax checking and linting
-Plugin 'file:///home/chaosbengel/.vim/plugins_upstream/ale'
+"Plugin 'file:///home/chaosbengel/.vim/plugins_upstream/ale'
 
 " Required, Plugin stuff MUST be done before this!
 call vundle#end() 

@@ -26,6 +26,8 @@ alias updchroot='arch-nspawn $AUR_CHROOT/root pacman -Syu'
 alias bashrc="vim ~/.bashrc"
 alias srcrc="source ~/.bashrc"
 
+alias sshconf='vim ~/.ssh/config'
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -37,10 +39,8 @@ alias vi='vim'
 
 function md2pdf {
     local infile
-    local outfile
     infile="$1"
-    outfile="$2"
-    pandoc --pdf-engine=pdfroff --output="$outfile" "$infile"
+    pandoc --pdf-engine=pdfroff --output="${infile/md/pdf}" "$infile"
 }
 
 function usbdd {
@@ -68,4 +68,4 @@ function sshbindport {
 }
 
 # Prompt
-PS1='[\u@\h \W]\$ '
+PS1='[\u@\h \W\$] '

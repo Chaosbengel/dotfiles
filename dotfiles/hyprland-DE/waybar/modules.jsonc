@@ -1,0 +1,73 @@
+{
+    "hyprland/workspaces": {
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 2
+    },
+    "clock": {
+        "format": "{:%H:%M} Uhr",
+        "format-alt": "{:%a, %d. %b %H:%M} Uhr"
+    },
+    "network#wifi": {
+        "interface": "wlan0",
+        "interval": 3,
+        "family": "ipv4",
+        "format": "{icon} {frequency}GHz: {essid} - {ipaddr}",
+        "format-alt": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-disconnected": "󰤭 Not connected",
+        "format-icons": ["󰤠","󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+    "network#wired": {
+        "interface": "enp0s31f6",
+        "interval": 3,
+        "family": "ipv4",
+        "format": "{icon} Connected: {ipaddr}",
+        "format-icons": ["󰈁"],
+        "format-disconnected": "󰈂  Not connected"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon}  {usage}%",
+        "format-icons": [""]
+    },
+    "memory#ram": {
+        "interval": 1,
+        "format": "{icon} {percentage}%",
+        "format-icons": [""]
+    },
+    "memory#swap": {
+        "interval": 1,
+        "format": "{icon} {swapPercentage}%",
+        "format-icons": ["󰪟"]
+    },
+    "temperature#cpu": {
+        "thermal-zone": 5,
+        "critical-threshold": 75,
+        "format": "{icon} {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {free}",
+        "path": "/"
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "󱐋 {capacity}%"
+    },
+    "custom/pawMenu": {
+        "format": "󰏩"
+    },
+    "custom/spaceTopLeft": {
+        "format": " "
+    },
+    "custom/spaceBottomMid": {
+        "format": " "
+    }
+
+}
+
+
