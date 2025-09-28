@@ -48,7 +48,7 @@ function usbdd {
     local out
     in="$1"
     out="$2"
-    lsblk | grep 'sd'
+    lsblk | grep --color=never 'sd'
     read -p "${RED}You chose $2 as target device. All data will be lost! Proceed? (YES):${NC} " choice
     [ "$choice" == "YES" ] && sudo dd if="$in" of="$out" bs=4M conv=fsync oflag=direct status=progress
 }
