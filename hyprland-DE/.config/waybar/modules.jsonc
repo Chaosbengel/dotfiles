@@ -16,6 +16,7 @@
         "format": "{icon} {frequency}GHz: {essid} - {ipaddr}",
         "format-alt": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
         "format-disconnected": "󰤭 Not connected",
+        "format-disabled": "󰤭  Disabled",
         "format-icons": ["󰤠","󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
     },
     "network#wired": {
@@ -24,7 +25,8 @@
         "family": "ipv4",
         "format": "{icon} Connected: {ipaddr}",
         "format-icons": ["󰈁"],
-        "format-disconnected": "󰈂  Not connected"
+        "format-disconnected": "󰈂  Not connected",
+        "format-disabled": "󰈂  Not connected"
     },
     "cpu": {
         "interval": 1,
@@ -66,6 +68,30 @@
     },
     "custom/spaceBottomMid": {
         "format": " "
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "scroll-step": 1,
+        "tooltip": false
+    },
+    "bluetooth": {
+        "format": "󰂯 {status}",
+        "format-off": "󰂲 {status}",
+        "format-connected": "󰂱 {device_alias}"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        // "format-bluetooth": "",
+        "format-muted": "󰝟 Mute",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 1,
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute 0 toggle",
+        "tooltip": false
     }
 
 }

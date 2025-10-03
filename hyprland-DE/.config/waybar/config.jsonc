@@ -5,7 +5,7 @@
         "height": 33,
         "modules-left": ["custom/pawMenu", "custom/spaceTopLeft", "cpu", "temperature#cpu", "memory#ram", "memory#swap", "disk", "battery"],
         "modules-center": ["clock"],
-        "modules-right": [],
+        "modules-right": ["pulseaudio", "bluetooth", "backlight"],
         "fixed-center": true,
         "include": [
             "~/.config/waybar/modules.jsonc"

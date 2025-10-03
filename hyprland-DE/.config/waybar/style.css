@@ -21,7 +21,7 @@ window#waybar {
             @rb-green 50%,
             @rb-blue 66.6%, 
             @rb-violet 83.3%);
-    background-origin:border-box;
+    background-origin: border-box;
     background-clip: padding-box, border-box;
     border-radius: 10px;
     
@@ -86,3 +86,9 @@ window#waybar {
 #tray {
     margin-right: 10px
 }
+
+#network.disabled,
+#network.disconnected {
+    color: @network-disconnected;
+}
+
