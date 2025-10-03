@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+
+PROMPT='Wirklich ausloggen?'
+
+OPTIONS=('Nein' 'Ja')
+
+WOFI_CONFIG="${XDG_CONFIG_HOME}/wofi/menu_small"
+WOFI_STYLE="${XDG_CONFIG_HOME}/wofi/logout_menu.css"
+    
+
+OPTION_STR=$(printf "%s\n" "${OPTIONS[@]}")
+
+# Wofi does not have a -T/--title parameter normally, 
+# currently, if you want to use this, you have to patch wofi
+# yourself.
+# Patch: https://lists.sr.ht/~scoopta/wofi/patches/62618
+
+CHOICE=$(echo -n "$OPTION_STR" | wofi -S dmenu -c "$WOFI_CONFIG" -s "$WOFI_STYLE" -j -T "$PROMPT")
+
+[ "$CHOICE" == "Ja" ] && hyprctl dispatch exit
+
+exit 0

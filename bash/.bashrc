@@ -14,7 +14,7 @@ CYN=$'\e[36m'
 WHT=$'\e[37m'
 NC=$'\e[0m'
 
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/hypr_de
 export AUR_CHROOT=/var/aur_build_chroot
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 

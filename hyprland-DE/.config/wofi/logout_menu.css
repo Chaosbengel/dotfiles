@@ -1,0 +1,7 @@
+@import "/home/chaosbengel/.config/wofi/style.css";
+
+
+#title {
+    color: #FF0000;
+    font-size: 18px;
+}

@@ -3,7 +3,7 @@ window {
     border: 0px;
     border-radius: 15px;
     color: #00FF00;
-    background-color: rgba(61, 58, 58, 0.75);
+    background-color: rgba(61, 58, 58, 0.85);
     font-family: monospace;
     font-size: 15px;
 }
@@ -26,15 +26,27 @@ window {
     background-color: transparent;
 }
 
+/* Title is normally not available in wofi. If you want it,
+ * you need to patch it yourself, currently.
+ * Patch: https://lists.sr.ht/~scoopta/wofi/patches/62618
+ */
+
+#title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 #scroll {
-    margin: 20px;
+    margin: 10px;
     border: 3px solid #00FF00;
     border-radius: 15px;
     background-color: transparent;
 }
 
 #inner-box {
-    margin: 20px;
+    margin: 10px;
     border: none;
     background-color: transparent;
 }
@@ -70,6 +82,7 @@ window {
 
 #entry:selected {
     margin: 0px;
+    color: white;
     border: 2px solid #00FF00;
     border-radius: 15px;
     background-color: transparent;
