@@ -111,6 +111,13 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " CTRL-g: Open LazyGit
 nnoremap <C-g> :!lazygit<CR><CR>
 
+" WHY?! WHY THE ACTUAL FUCK DO I HAVE TO TYPE :vsplit FOR ABOT
+" 15 FREAKING YEARS BEFORE I HAVE THE IDEA TO MAP THIS SHIT?!
+" I FUCKING HATE MYSELF FOR THIS!
+nnoremap <C-v> :vsplit<CR>
+nnoremap <C-x> :wq<CR>
+nnoremap <C-s> :w<CR>
+
 " ALE Configuraion
 
 " Only run linters explicitly configures
