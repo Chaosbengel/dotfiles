@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+OPTIONS=('Herunterfahren' 'Neu starten' 'Standby' 'Ruhezustand')
+
+
+OPTION_STR=$(printf "%s\n" "${OPTIONS[@]}")
+
+CHOICE=$(echo -n "$OPTION_STR" | wofi -S dmenu -j --height 150 --width 500)
+
+case $CHOICE in
+    'Herunterfahren')
+        shutdown -h 0
+        ;;
+    'Neu Starten')
+        shutdown -r 0
+        ;;
+    'Standby')
+        systemctl suspend
+        ;;
+    'Ruhezustand')
+        systemctl hibernate
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+

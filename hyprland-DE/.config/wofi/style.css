@@ -1,3 +1,5 @@
+@import url("./colors.css");
+
 window {
     margin: 5px;
     border: 0px;
@@ -26,9 +28,8 @@ window {
     background-color: transparent;
 }
 
-/* Title is normally not available in wofi. If you want it,
- * you need to patch it yourself, currently.
- * Patch: https://lists.sr.ht/~scoopta/wofi/patches/62618
+/* Title is normally not available in wofi v1.5.1. If you want it,
+ * you need to build from newest source!
  */
 
 #title {
@@ -36,6 +37,13 @@ window {
     margin-bottom: 0px;
     font-weight: bold;
     font-size: 15px;
+    color: linear-gradient(90deg,
+        @rb-red 0%,
+        @rb-orange 16.6%,
+        @rb-yellow 33.3%,
+        @rb-green 50%,
+        @rb-blue 66.6%, 
+        @rb-violet 83.3%);
 }
 
 #scroll {

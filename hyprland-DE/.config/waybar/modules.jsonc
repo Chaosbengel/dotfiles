@@ -1,5 +1,6 @@
 {
     "hyprland/workspaces": {
+        "ignore-workspaces": ["^Y$"]
     },
     "tray": {
         "icon-size": 20,
