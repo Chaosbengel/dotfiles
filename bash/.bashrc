@@ -27,6 +27,7 @@ alias bashrc="vim ~/.bashrc"
 alias srcrc="source ~/.bashrc"
 
 alias sshconf='vim ~/.ssh/config'
+alias nuke='rm -rf'
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -34,6 +35,7 @@ alias ....="cd ../../.."
 
 # Load Mah Key!
 alias lmk='ssh-add ~/.ssh/chaosbengel'
+alias lmk2='ssh-add ~/.ssh/kinzer'
 alias lzg='lazygit'
 alias vi='vim'
 
